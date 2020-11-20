@@ -1,0 +1,6 @@
+org.apache.spark.sql.execution.datasources.parquet.S3ParquetFileFormat
+org.apache.spark.sql.execution.datasources.json.S3JsonFileFormat
+org.apache.spark.sql.execution.datasources.text.S3TextFileFormat
+org.apache.spark.sql.execution.datasources.orc.S3OrcFileFormat
+org.apache.spark.sql.execution.datasources.csv.S3CSVFileFormat
+org.apache.spark.sql.avro.S3AvroFileFormat

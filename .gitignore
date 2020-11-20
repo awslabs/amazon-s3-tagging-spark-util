@@ -1,0 +1,11 @@
+target
+.ensime_cache/
+.ensime
+*.class
+*.iml
+*.ipr
+*.iws
+.idea
+out
+.DS_Store
+.bsp
