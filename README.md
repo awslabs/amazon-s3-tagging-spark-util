@@ -26,7 +26,7 @@ The project is compiled using [SBT](https://www.scala-sbt.org/1.x/docs/Command-L
 
 * The above commands will generate the following JAR:
 ```
-target/scala-2.11/SparkS3TaggingDataSource-assembly-1.0.jar
+target/scala-2.11/amazon-s3-tagging-spark-util-assembly-1.0.jar
 ```
 
 This JAR includes the `spark-avro` and `commons-lang3` and its dependencies. They need to be put in Spark's extra classpath. 
@@ -35,13 +35,13 @@ This JAR includes the `spark-avro` and `commons-lang3` and its dependencies. The
 
 Copy the JAR into Amazon S3 bucket
 ```shell
-aws s3 cp target/scala-2.11/SparkS3TaggingDataSource-assembly-1.0.jar s3://$BUCKET/$PREFIX
+aws s3 cp target/scala-2.11/amazon-s3-tagging-spark-util-assembly-1.0.jar s3://$BUCKET/$PREFIX
 ```
 
 Create a Glue ETL job with following special parameters. For more details on [AWS Glue Special Parameters](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-glue-arguments.html).
 
 ```yaml
-"--extra-jars" : "s3://$BUCKET/$PREFIX/SparkS3TaggingDataSource-assembly-1.0.jar"
+"--extra-jars" : "s3://$BUCKET/$PREFIX/amazon-s3-tagging-spark-util-assembly-1.0.jar"
 ```
 
 Sample Scala Spark Code: For this example, we assume that we work on some kind of `customer` data, where every it has customer id, name , street, city and country.
