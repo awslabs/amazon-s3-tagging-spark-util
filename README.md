@@ -83,7 +83,7 @@ Store the data into S3 and tag the objects using additional options.
 customerDataFrame
   .write
   .format("s3.parquet")
-  .option("tag", "{\"ProjectTeam\": \"Team-A\", \"FileType\":\"parquet\"}")
+  .option("tags", "{\"ProjectTeam\": \"Team-A\", \"FileType\":\"parquet\"}")
   .save("s3://$DATA_BUCKET/$TABLE_NAME")
 
 // Option 2: Dynamic Tagging using partition value
@@ -91,7 +91,7 @@ customerDataFrame
   .write
   .partitionBy("country")
   .format("s3.parquet")
-  .option("tag", "{\"ProjectTeam\": \"Team-A\", \"Country\":\"${country}\"}")
+  .option("tags", "{\"ProjectTeam\": \"Team-A\", \"Country\":\"${country}\"}")
   .save("s3://$DATA_BUCKET/$TABLE_NAME")
 ```
 
