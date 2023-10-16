@@ -9,3 +9,5 @@ target
 out
 .DS_Store
 .bsp
+.venv/
+*/.venv/
