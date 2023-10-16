@@ -48,6 +48,15 @@ Spark 3.3:
 spark_33/target/scala-2.12/amazon-s3-tagging-spark-util-spark_33-scala-2.12-lib-2.0.jar
 ```
 
+Spark 3.4:
+
+* To compile the project, run `sbt spark_34/compile`
+* To generate the connector jar run `sbt spark_34/compile`
+* The above commands will generate the following JAR:
+```
+spark_34/target/scala-2.12/amazon-s3-tagging-spark-util-spark_34-scala-2.12-lib-2.0.jar
+```
+
 This JAR includes the `spark-avro` and `commons-lang3` and its dependencies. They need to be put in Spark's extra classpath. 
 
 Note:- The released JARs are available in the [releases](https://github.com/awslabs/amazon-s3-tagging-spark-util/releases) page. 
